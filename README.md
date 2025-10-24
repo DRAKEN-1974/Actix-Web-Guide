@@ -54,25 +54,12 @@ git clone https://github.com/DRAKEN-1974/Actix-Web-Guide.git
 cd Actix-Web-Guide
 cargo build
 ```
+here you must see that before running the cargo build i will tell you to open the respective folder you want to use.
+as there are respective folder which will contain specific projects and building the whole repo is of no use.
 
-Many examples live in `examples/` or `src/bin/`. Check each example’s header/comments for required env vars, ports, or DB setup.
+Many examples live in `production-ready` or `basic-examples`. Check each example’s header/comments for required env vars, ports, or DB setup.
 
-Running examples
-----------------
-- Example in `examples/`:
-```bash
-cargo run --example example_name
-```
 
-- Binary in `src/bin/`:
-```bash
-cargo run --bin binary_name
-```
-
-- Run main crate:
-```bash
-cargo run
-```
 
 Project structure
 -----------------
@@ -85,9 +72,11 @@ A typical layout (your repository may vary slightly):
   - main.rs        # optional main app
   - lib.rs         # library core for shared code
   - bin/           # additional binaries
-- examples/        # standalone example programs
 - docs/            # extended guides and design notes
 - tests/           # integration tests
+
+I have aslo divided the project in two main folders where one contains the program that i have tried to write equal to the production grade (it is not up to the mark but you would ot have to write the whole code atleast) whereas the second one is basic programs where  i have just created programs to get an idea that how it works.NOTE:-I will convert some of the basic-examples into the prod-grade code so if anyone you come to contribute you can do that too.
+
 
 Included guides & examples
 --------------------------
@@ -103,43 +92,12 @@ Expect to find (see repository for exact filenames):
 - Async patterns: spawn_blocking, graceful shutdown, long-running tasks
 - Testing: unit and integration examples using actix-test
 
-Testing, linting, formatting & CI
----------------------------------
-Use standard Rust tooling:
-
-```bash
-# Run tests
-cargo test
-
-# Lint (clippy)
-cargo clippy --all-targets --all-features -- -D warnings
-
-# Format
-cargo fmt
-```
-
-Suggested CI steps (GitHub Actions or similar):
-- cargo build --workspace --all-targets
-- cargo clippy (as configured)
-- cargo test
-- optionally run cargo fmt -- --check
-
-If you use GitHub Actions, ensure your workflow file (e.g., .github/workflows/ci.yml) matches the badge path used above.
 
 Deployment & production notes
 -----------------------------
-- Use a reverse proxy (nginx/Caddy) for TLS termination and static files, or configure TLS in-app when needed.
-- Tune Actix worker counts for your workload (I/O vs CPU bound).
-- Use connection pools (e.g., sqlx::PgPool) and share with application state (Arc).
-- Handle graceful shutdown (SIGINT/SIGTERM) to finish in-flight requests.
-- Avoid blocking the async runtime (use spawn_blocking for heavy CPU work).
-- Add structured logging (tracing + tracing-actix-web) and metrics (Prometheus), and consider OpenTelemetry for distributed traces.
+- I haven`t deployed any of them but i have tested them using the real database and postman and curl and i believe most of them works but if you guys find any issue please feel free to pin it out.
+- and if you can please raise a pr and fix that i will merge it.
 
-Common pitfalls
----------------
-- Blocking synchronous code on the async executor.
-- Misusing lifetimes with extractors and state — prefer shared Arcs for global state.
-- Eagerly loading large request bodies instead of streaming.
 
 Contributing
 ------------
@@ -152,10 +110,12 @@ Guidelines:
 - Keep examples focused and minimal.
 - Document external services, env vars, and version assumptions.
 - Add tests for behavior changes where possible.
+- NOTE: - VIBE CODDERS ARE REQUESTED TO STAY AWAY.
 
 License
 -------
 See the LICENSE file in this repository for the repository license. The license badge above links to it.
+
 
 Acknowledgements & resources
 ---------------------------
@@ -167,6 +127,7 @@ Acknowledgements & resources
 Contact
 -------
 For repo-specific questions or to request examples, open an issue in this repository.
+other than that : - you can follow me on the instagram-draken-1974
 
-Happy hacking with Actix Web! 🚀
+Happy hacking with Actix Web! 
 ```
