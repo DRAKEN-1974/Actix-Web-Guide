@@ -1,4 +1,4 @@
-```markdown
+
 # Actix Web Guide
 
 [![CI](https://img.shields.io/github/actions/workflow/status/DRAKEN-1974/Actix-Web-Guide/ci.yml?branch=main&label=github%20actions&style=flat-square)](https://github.com/DRAKEN-1974/Actix-Web-Guide/actions)
