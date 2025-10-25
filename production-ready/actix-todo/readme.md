@@ -46,9 +46,15 @@ cargo build
 ## Contribution
 1.Till now I have only made a single protected route so you guys can add more it is just that i have done it to show you can make a protected routes and later in this series i will add the full projects too 
 so if you want to learn you can start from here else you can use the full project that i will make.
+
+
 2.Please feel free to contribute in it you can add more routes and all just dont fuck it up and keep it good and usable for new guys.
+
+
 3.Please give your valuable feedbacks and i will make improvements accordingly.
+
+
 4.Vibe coders are asked to stay away please.
 
-##Notes From ADMIN
+## Notes From ADMIN
 1.The main aim of this whole project is to give  a starter so that newbies can get the basics as well my personal development.
