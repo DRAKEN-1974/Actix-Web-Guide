@@ -115,6 +115,8 @@ Guidelines:
 License
 -------
 See the LICENSE file in this repository for the repository license. The license badge above links to it.
+I think there is some mit licenese which is popular so yes that is what i am using .
+
 
 
 Acknowledgements & resources
